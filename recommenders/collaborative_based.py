@@ -56,6 +56,13 @@ util_matrix_norm = util_matrix_norm.loc[(util_matrix_norm != 0).any(axis=1)]
 
 # this function converts movies ids to movie titles
 def indices_to_titles(idx_list):
+    """
+    function converts movie ids to movie titles. 
+    parameters:
+    idx_list: a list containing movie ids
+    output:
+    title_list: a list containing corresponding movie titles
+    """
     title_list = []
     for idx in idx_list:
         movie_title = movies_df[movies_df['movieId'] == idx]['title']
@@ -67,8 +74,13 @@ def indices_to_titles(idx_list):
 # for each of the movies, select the users with the highest ratings
 def highest_rated_users(movie_list):
     """
-    given a movie list, it returns users that are associated with that movie. For the sake of brevity
-    only highest rating users are returned because they liked the movie best. """
+    Given a movie title list, function returns users that are associated with that movie. For the sake of brevity
+    only highest rating users are returned because they liked the movie best. 
+    parameters:
+    movie_list: list containing movie titles  
+    output:
+    users_raters_list: a list containing the user ids of users who rated a movie highest.   
+    """
 
     # get the movie id of the rated data
     users_raters_list = []

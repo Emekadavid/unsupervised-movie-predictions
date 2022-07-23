@@ -45,7 +45,7 @@ def main():
 
     # DO NOT REMOVE the 'Recommender System' option below, however,
     # you are welcome to add more options to enrich your app.
-    page_options = ["Recommender System","Solution Overview", "Movies EDA"]
+    page_options = ["Recommender System","Solution Overview", "Movies EDA", "About Sigma AI"]
 
     # -------------------------------------------------------------------
     # ----------- !! THIS CODE MUST NOT BE ALTERED !! -------------------
@@ -155,7 +155,25 @@ def main():
         st.header("Frequently used tags")
         st.image('resources/imgs/tags.png',use_column_width=True)
         st.write("From the word cloud above, we noticed resonating and often-occurring tags in movie titles. They are love, story, murder, family, topless, and crime. We could also add drugs, relationships, comedy, and woman to that list. So I guess if a film producer wants his movie to be well rated, they should use one of these words in their movie titles.")
-
+    if page_selection == "About Sigma AI":
+        st.title("About Sigma AI")
+        st.write("Sigma AI is Africa’s first company to use cutting-edge machine learning and artificial intelligence technology to produce recommendation systems for the entertainment, educational, book, and commercial industries. The recommendation systems take item-to-item and user idiosyncrasies into account.")
+        st.write("Sigma AI is headquartered in Lagos, Nigeria, with offices in Johannesburg, South Africa, and Nairobi, Kenya. It comprises a core team of five machine learning engineers and software engineers. Some of our clients include Netflix, Facebook, Google, and DStv.")
+        st.header("The Sigma AI Team")
+        st.write("Here are the five core members of the Sigma AI team.")
+        col1, col2, col3, col4, col5 = st.columns(5)
+        with col1:
+            st.image('resources/imgs/tony.jpg', caption="Tony Makwe.\n Project Team Lead")
+        with col2:
+            st.image('resources/imgs/david.jpg', caption="David Odimegwu.\n Technical Lead")
+        with col3:
+            st.image('resources/imgs/rabe.jpg', caption="Rabelani Ratshisuka.\n Administrative Lead")
+        with col4:
+            st.image('resources/imgs/basheer.jpg', caption="Basheer Ashafa.\n Project Manager")
+        with col5:
+            st.image('resources/imgs/nana.jpg', caption="Nana Adewale.\n Technical Support")
+        
+        
 
 
 
